@@ -78,6 +78,33 @@
     </div>
 </footer>
 
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Бронювання авто</h2>
+
+        <div class="date-inputs">
+            <label>
+                Початок оренди:
+                <input type="date" id="startDate">
+            </label>
+            <label>
+                Кінець оренди:
+                <input type="date" id="endDate">
+            </label>
+        </div>
+
+        <div class="price-calculation">
+            <p>Ціна за добу: <span id="modalPricePerDay">0</span> грн</p>
+            <p>Кількість днів: <span id="modalDays">0</span></p>
+            <hr>
+            <h3>Всього до сплати: <span id="modalTotalPrice">0</span> грн</h3>
+        </div>
+
+        <button class="btn-rent" onclick="confirmBooking()">Підтвердити бронювання</button>
+    </div>
+</div>
+
 <script src="assets/js/script.js"></script>
 
 </body>
