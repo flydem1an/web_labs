@@ -4,8 +4,13 @@ export default function CarCard({ car, onRent }) {
     return (
         <article className="car-card">
             <div className="car-image-placeholder">
-                {car.image}
+                <img
+                    src={car.image}
+                    alt={`${car.brand} ${car.model}`}
+                    style={{width: '100%', height: '100%', objectFit: 'cover'}}
+                />
             </div>
+
             <h3>{car.brand} {car.model}</h3>
             <p className="price">{car.price} грн/доба</p>
             <ul className="car-details">
