@@ -30,7 +30,24 @@ export default function BookingModal({ car, isOpen, onClose }) {
 
     const handleConfirm = () => {
         if (totalPrice > 0) {
-            alert(`Бронювання підтверджено!\nАвто: ${car.brand} ${car.model}\nДо сплати: ${totalPrice} грн`);
+            const newBooking = {
+                id: Date.now(),
+                carBrand: car.brand,
+                carModel: car.model,
+                carImage: car.image,
+                startDate: startDate,
+                endDate: endDate,
+                totalPrice: totalPrice,
+                date: new Date().toLocaleDateString()
+            };
+
+            const existingBookings = JSON.parse(localStorage.getItem('myBookings')) || [];
+
+            const updatedBookings = [...existingBookings, newBooking];
+
+            localStorage.setItem('myBookings', JSON.stringify(updatedBookings));
+
+            alert(`Успішно! Ви забронювали ${car.brand} ${car.model}. Перевірте Кабінет.`);
             onClose();
         } else {
             alert("Будь ласка, виберіть коректні дати");
