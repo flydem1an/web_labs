@@ -1,111 +1,13 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolitechDrive - Оренда авто</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-<header class="site-header">
-    <div class="container">
-        <div class="logo">PolitechDrive</div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#cars">Автомобілі</a></li>
-                <li><a href="#bookings">Мій кабінет</a></li>
-                <li><a href="#about">Про нас</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main>
-    <section id="cars" class="section-cars">
-        <div class="container">
-            <h2>Наш автопарк</h2>
-            <div class="car-grid">
-            </div>
-        </div>
-    </section>
-
-    <section id="bookings" class="section-bookings">
-        <div class="container">
-            <h2>Особистий кабінет</h2>
-            <div class="user-info">
-                <p>Вітаємо, <strong>Юзер</strong>!</p>
-            </div>
-            <h3>Мої активні бронювання</h3>
-            <div class="booking-list" id="my-bookings">
-                <div class="booking-item">
-                    <h4>Skoda Octavia</h4>
-                    <p>📅 Дата: 25.10.2025 - 27.10.2025</p>
-                    <p class="status confirmed">Статус: Підтверджено</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section-about">
-        <div class="container">
-            <h2>Контакти</h2>
-            <p>Найкращий сервіс оренди для студентів та викладачів.</p>
-
-            <address class="contact-info">
-                <p>📍 <strong>Адреса:</strong> вул. Степана Бандери, 28А, Львів, 79000</p>
-                <p>📞 <strong>Телефон:</strong> +380 98 765 4321</p>
-            </address>
-
-            <div class="map-placeholder">
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.685899933096!2d24.012297876077366!3d49.83754983191191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add790e2e7775%3A0x67399f6645391696!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgwqvQm9GM0LLRltCy0YHRjNC60LAg0L_QvtC70ZbRgtC10YXQvdGW0LrCuw!5e0!3m2!1suk!2sua!4v1709224488998!5m2!1suk!2sua"
-                        width="100%"
-                        height="400"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container">
-        <p>&copy; 2026 PolitechDrive. Всі права належать Валентину Дем'яну</p>
-    </div>
-</footer>
-
-<div id="bookingModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle">Бронювання авто</h2>
-
-        <div class="date-inputs">
-            <label>
-                Початок оренди:
-                <input type="date" id="startDate">
-            </label>
-            <label>
-                Кінець оренди:
-                <input type="date" id="endDate">
-            </label>
-        </div>
-
-        <div class="price-calculation">
-            <p>Ціна за добу: <span id="modalPricePerDay">0</span> грн</p>
-            <p>Кількість днів: <span id="modalDays">0</span></p>
-            <hr>
-            <h3>Всього до сплати: <span id="modalTotalPrice">0</span> грн</h3>
-        </div>
-
-        <button class="btn-rent" onclick="confirmBooking()">Підтвердити бронювання</button>
-    </div>
-</div>
-
-<script src="assets/js/script.js"></script>
-
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web_labs</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
