@@ -1,29 +1,28 @@
 import React from 'react';
-import CarCard from '../components/CarCard';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
-    // temporary
-    const testCar = {
-        id: 1,
-        brand: "BMW",
-        model: "X5",
-        price: 3000,
-        image: "BMW X5 Image",
-        transmission: "Автомат",
-        rating: 5.0
-    };
-
-    const handleRent = (car) => {
-        alert(`Ви хочете орендувати: ${car.brand} ${car.model}`);
-    };
-
     return (
-        <section>
-            <h2>Наш автопарк</h2>
-            <div className="car-grid">
-                <CarCard car={testCar} onRent={handleRent} />
-                <CarCard car={testCar} onRent={handleRent} />
-                <CarCard car={testCar} onRent={handleRent} />
+        <section className="hero-section">
+            <div className="hero-content">
+                <h1>PolitechDrive</h1>
+                <p>Твоя свобода руху. Обери найкраще авто для своїх подорожей Львовом та областю.</p>
+
+                <Link to="/catalog" className="btn-hero">
+                    Обрати автомобіль
+                </Link>
+
+                <div className="hero-features">
+                    <div className="feature">
+                        <span>⚡</span> Швидка подача
+                    </div>
+                    <div className="feature">
+                        <span>🛡️</span> Повне КАСКО
+                    </div>
+                    <div className="feature">
+                        <span>💰</span> Кращі ціни
+                    </div>
+                </div>
             </div>
         </section>
     );
