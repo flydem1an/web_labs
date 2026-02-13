@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 export default function BookingModal({ car, isOpen, onClose }) {
-    if (!isOpen || !car) return null;
-
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [totalPrice, setTotalPrice] = useState(0);
     const [daysCount, setDaysCount] = useState(0);
 
     useEffect(() => {
-        if (startDate && endDate) {
+        if (startDate && endDate && car) {
             const start = new Date(startDate);
             const end = new Date(endDate);
             const timeDiff = end - start;
@@ -53,6 +51,8 @@ export default function BookingModal({ car, isOpen, onClose }) {
             alert("Будь ласка, виберіть коректні дати");
         }
     };
+
+    if (!isOpen || !car) return null;
 
     return (
         <div className="modal" style={{display: 'block'}} onClick={onClose}>

@@ -9,7 +9,7 @@ export default function Catalog() {
             brand: "Toyota",
             model: "Camry",
             price: 1200,
-            image: "/images/toyota-camry.jpg", // <--- Слеш на початку, без слова public
+            image: "/images/toyota-camry.jpg",
             transmission: "Автомат",
             rating: 4.8
         },

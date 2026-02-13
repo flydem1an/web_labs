@@ -14,13 +14,13 @@ export default function Home() {
 
                 <div className="hero-features">
                     <div className="feature">
-                        <span>⚡</span> Швидка подача
+                        Швидка подача
                     </div>
                     <div className="feature">
-                        <span>🛡️</span> Повне КАСКО
+                        Зручний сервіс
                     </div>
                     <div className="feature">
-                        <span>💰</span> Кращі ціни
+                        Кращі ціни
                     </div>
                 </div>
             </div>

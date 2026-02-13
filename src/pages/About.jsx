@@ -9,10 +9,13 @@ export default function About() {
                 <div className="contact-info">
                     <p>Найкращий сервіс оренди для студентів та викладачів.</p>
                     <p><strong>Адреса:</strong> вул. Степана Бандери, 28А, Львів, 79000</p>
-                    <p><strong>Телефон:</strong> +380 99 999 99 99</p>
+                    <p><strong>Телефон:</strong>
+                        <a href="tel:+380999999999" style={{color: 'inherit', textDecoration: 'none'}}>
+                            +380 99 999 99 99
+                        </a>
+                    </p>
                 </div>
 
-                {/* Блок з картою */}
                 <div className="map-wrapper" style={{marginTop: '30px'}}>
                     <iframe
                         title="Google Map"
